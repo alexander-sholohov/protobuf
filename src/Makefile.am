@@ -160,6 +160,7 @@ nobase_include_HEADERS =                                         \
   google/protobuf/compiler/php/php_generator.h                   \
   google/protobuf/compiler/python/python_generator.h             \
   google/protobuf/compiler/ruby/ruby_generator.h                 \
+  google/protobuf/compiler/yaml/yaml_generator.h                 \
   google/protobuf/util/type_resolver.h                           \
   google/protobuf/util/delimited_message_util.h                  \
   google/protobuf/util/field_comparator.h                        \
@@ -435,6 +436,7 @@ libprotoc_la_SOURCES =                                         \
   google/protobuf/compiler/php/php_generator.cc                \
   google/protobuf/compiler/python/python_generator.cc          \
   google/protobuf/compiler/ruby/ruby_generator.cc              \
+  google/protobuf/compiler/yaml/yaml_generator.cc              \
   google/protobuf/compiler/csharp/csharp_doc_comment.cc        \
   google/protobuf/compiler/csharp/csharp_doc_comment.h         \
   google/protobuf/compiler/csharp/csharp_enum.cc               \

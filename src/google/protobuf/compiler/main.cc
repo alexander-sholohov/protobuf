@@ -39,6 +39,7 @@
 #include <google/protobuf/compiler/objectivec/objectivec_generator.h>
 #include <google/protobuf/compiler/php/php_generator.h>
 #include <google/protobuf/compiler/ruby/ruby_generator.h>
+#include <google/protobuf/compiler/yaml/yaml_generator.h>
 
 #include <google/protobuf/port_def.inc>
 
@@ -96,6 +97,11 @@ int ProtobufMain(int argc, char* argv[]) {
   js::Generator js_generator;
   cli.RegisterGenerator("--js_out", "--js_opt", &js_generator,
                         "Generate JavaScript source.");
+
+  // Proto2 YAML
+  yaml::Generator yaml_generator;
+  cli.RegisterGenerator( "--yaml_out", &yaml_generator,
+      "Generate YAML." );
 
   return cli.Run(argc, argv);
 }
